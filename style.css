@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 118px;
 }
 
 body {
@@ -79,6 +80,10 @@ a {
 }
 
 .main-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-toggle {
   display: none;
 }
 
@@ -272,6 +277,7 @@ h3 {
 
 .section {
   padding: var(--section-y) var(--section-x);
+  scroll-margin-top: 118px;
 }
 
 .section-heading {
@@ -1052,35 +1058,87 @@ h3 {
 
 @media (max-width: 620px) {
   :root {
-    --section-y: 56px;
+    --section-y: 54px;
     --section-x: 18px;
     --section-heading-gap: 24px;
+  }
+
+  html {
+    scroll-padding-top: 126px;
   }
 
   .site-header {
     padding: 10px 14px 12px;
     background: rgba(5, 7, 10, 0.94);
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
   }
 
   .brand {
     font-size: 1.9rem;
   }
 
+  .menu-toggle {
+    display: inline-grid;
+    justify-self: end;
+    place-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.055);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--white);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .site-header.menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
   .main-nav {
+    grid-column: 1 / -1;
+    display: none;
+    grid-template-columns: 1fr;
     gap: 7px;
-    padding-bottom: 2px;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 10px;
+    mask-image: none;
+    overflow: visible;
+  }
+
+  .site-header.menu-open .main-nav {
+    display: grid;
   }
 
   .nav-buttons a {
+    width: 100%;
     min-height: 32px;
     padding: 0 10px;
     font-size: 0.66rem;
+    white-space: nowrap;
   }
 
   .hero {
     min-height: 88svh;
     align-content: start;
-    gap: 20px;
+    gap: 16px;
     padding: 120px 18px 36px;
   }
 
@@ -1114,6 +1172,7 @@ h3 {
   .hero-description {
     font-size: 0.95rem;
     line-height: 1.55;
+    max-width: 34rem;
   }
 
   .hero-product {
@@ -1145,6 +1204,10 @@ h3 {
     padding: 20px;
   }
 
+  .feature-card p {
+    margin-bottom: 0;
+  }
+
   .feature-icon {
     width: 56px;
     height: 56px;
@@ -1168,12 +1231,12 @@ h3 {
     min-height: 0;
     height: auto;
     aspect-ratio: 9 / 16;
-    max-height: 72svh;
+    max-height: 62svh;
     object-fit: cover;
   }
 
   .usage-step {
-    padding: 72px 18px 18px;
+    padding: 68px 18px 18px;
   }
 
   .usage-step span {
@@ -1190,7 +1253,12 @@ h3 {
     padding: 16px;
   }
 
+  .gallery-main {
+    aspect-ratio: 4 / 3;
+  }
+
   .gallery-thumbs {
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
@@ -1200,7 +1268,7 @@ h3 {
   }
 
   .testimonial-track {
-    min-height: 300px;
+    min-height: 280px;
   }
 
   .testimonial-card p {
@@ -1246,6 +1314,11 @@ h3 {
     padding: 20px;
   }
 
+  .advantage-card strong,
+  .spec-grid strong {
+    font-size: 0.98rem;
+  }
+
   .cta-section {
     min-height: 320px;
   }
@@ -1268,6 +1341,7 @@ h3 {
 
 @media (max-width: 420px) {
   .hero {
+    min-height: auto;
     padding-top: 116px;
   }
 
@@ -1280,16 +1354,17 @@ h3 {
   }
 
   .hero-product img:not(.hidden-preload) {
-    width: min(290px, 84vw);
+    width: min(270px, 82vw);
   }
 
   .usage-video {
-    max-height: 66svh;
+    max-height: 58svh;
   }
 
   .color-info {
     grid-template-columns: 1fr;
     text-align: center;
+    min-height: 0;
   }
 
   .color-picker {
@@ -1305,5 +1380,13 @@ h3 {
 
   .impact {
     padding: 62px 16px;
+  }
+
+  .selected-color {
+    font-size: clamp(2.1rem, 14vw, 3rem);
+  }
+
+  .color-description {
+    font-size: 0.94rem;
   }
 }

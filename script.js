@@ -1,4 +1,12 @@
 const revealItems = document.querySelectorAll(".reveal");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+menuToggle?.addEventListener("click", () => {
+  const isOpen = siteHeader.classList.toggle("menu-open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -145,6 +153,8 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (!target) return;
 
     event.preventDefault();
+    siteHeader?.classList.remove("menu-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });

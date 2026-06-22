@@ -107,7 +107,13 @@ thumbs.forEach((thumb) => {
 const colorShell = document.getElementById("colorShell");
 const colorProduct = document.getElementById("colorProduct");
 const selectedColor = document.getElementById("selectedColor");
+const colorDescription = document.getElementById("colorDescription");
 const swatches = document.querySelectorAll(".color-swatch");
+
+const colorDescriptions = {
+  "Azul Makita": "El acabado clásico Makita: técnico, reconocible y alineado con el sistema LXT® de herramientas profesionales.",
+  "Verde militar": "Un tono sobrio y resistente, pensado para exteriores, camping y equipos que priorizan presencia discreta y robustez."
+};
 
 swatches.forEach((swatch) => {
   swatch.addEventListener("click", () => {
@@ -126,6 +132,7 @@ swatches.forEach((swatch) => {
       colorProduct.src = image;
       colorProduct.alt = `Makita DCM501 color ${color}`;
       selectedColor.textContent = color;
+      colorDescription.textContent = colorDescriptions[color] || "";
       colorProduct.style.opacity = "1";
       colorProduct.style.transform = "scale(1)";
     }, 180);

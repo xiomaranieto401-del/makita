@@ -8,9 +8,9 @@
   --line: rgba(255, 255, 255, 0.12);
   --white: #ffffff;
   --max: 1180px;
-  --section-y: clamp(86px, 9vw, 112px);
+  --section-y: clamp(64px, 7vw, 86px);
   --section-x: clamp(20px, 5vw, 70px);
-  --section-heading-gap: 42px;
+  --section-heading-gap: 30px;
 }
 
 * {
@@ -113,12 +113,12 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 88vh;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.75fr);
   align-items: center;
   gap: 40px;
-  padding: 120px var(--section-x) 70px;
+  padding: 104px var(--section-x) 54px;
   overflow: hidden;
 }
 
@@ -172,7 +172,7 @@ h2 {
 h1 {
   max-width: 780px;
   margin-bottom: 20px;
-  font-size: clamp(4.3rem, 10vw, 9.4rem);
+  font-size: clamp(4rem, 8.6vw, 8.2rem);
 }
 
 h2 {
@@ -262,7 +262,7 @@ h3 {
 }
 
 .hero-product img:not(.hidden-preload) {
-  width: min(560px, 100%);
+  width: min(500px, 100%);
   margin-left: auto;
   filter:
     drop-shadow(0 22px 26px rgba(0, 0, 0, 0.64))
@@ -283,6 +283,10 @@ h3 {
   max-width: 620px;
   color: var(--muted);
   font-size: 1.08rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 12px;
 }
 
 .features {
@@ -306,8 +310,8 @@ h3 {
 }
 
 .feature-card {
-  min-height: 248px;
-  padding: 30px;
+  min-height: 210px;
+  padding: 24px;
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
@@ -322,7 +326,7 @@ h3 {
   place-items: center;
   width: 62px;
   height: 62px;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
   border: 1px solid rgba(0, 168, 214, 0.42);
   background: rgba(0, 102, 179, 0.14);
   color: var(--makita-bright);
@@ -366,7 +370,7 @@ h3 {
 .usage-video-frame {
   position: relative;
   overflow: hidden;
-  height: clamp(430px, 58vh, 540px);
+  height: clamp(360px, 50vh, 460px);
   border: 1px solid rgba(0, 168, 214, 0.34);
   background:
     linear-gradient(135deg, rgba(0, 102, 179, 0.24), transparent 45%),
@@ -563,7 +567,7 @@ h3 {
 
 .spec-gallery,
 .color-product-shell {
-  padding: 24px;
+  padding: 18px;
   background:
     radial-gradient(circle at 50% 45%, rgba(0, 168, 214, 0.18), transparent 46%),
     linear-gradient(135deg, rgba(0, 102, 179, 0.28), transparent),
@@ -608,8 +612,8 @@ h3 {
 }
 
 .spec-grid article {
-  min-height: 112px;
-  padding: 18px 20px;
+  min-height: 98px;
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -633,14 +637,14 @@ h3 {
 }
 
 .testimonial-track {
-  min-height: 290px;
+  min-height: 250px;
 }
 
 .testimonial-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(28px, 5vw, 58px);
+  padding: clamp(24px, 4vw, 44px);
 }
 
 .testimonial-controls {
@@ -688,7 +692,7 @@ h3 {
   min-height: 0;
   aspect-ratio: auto;
   margin: 0;
-  padding: var(--section-y) var(--section-x);
+  padding: clamp(58px, 7vw, 82px) var(--section-x);
   background:
     linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0 12%, transparent 12% 34%, rgba(255, 255, 255, 0.055) 34% 44%, transparent 44%),
     repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 20px),
@@ -761,8 +765,8 @@ h3 {
   grid-template-columns: auto minmax(0, 1fr);
   gap: 22px;
   align-items: center;
-  min-height: 230px;
-  padding: 24px;
+  min-height: 200px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.58);
   border: 1px solid rgba(0, 102, 179, 0.1);
 }
@@ -863,8 +867,8 @@ h3 {
 }
 
 .advantage-card {
-  min-height: 164px;
-  padding: 22px;
+  min-height: 138px;
+  padding: 20px;
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
@@ -895,7 +899,7 @@ h3 {
 .cta-section {
   display: grid;
   place-items: center;
-  min-height: 460px;
+  min-height: 360px;
   padding: var(--section-y) var(--section-x);
   text-align: center;
   background:
@@ -1048,9 +1052,9 @@ h3 {
 
 @media (max-width: 620px) {
   :root {
-    --section-y: 70px;
+    --section-y: 56px;
     --section-x: 18px;
-    --section-heading-gap: 30px;
+    --section-heading-gap: 24px;
   }
 
   .site-header {
@@ -1074,10 +1078,10 @@ h3 {
   }
 
   .hero {
-    min-height: 100svh;
+    min-height: 88svh;
     align-content: start;
     gap: 20px;
-    padding: 128px 18px 44px;
+    padding: 120px 18px 36px;
   }
 
   .hero-media {
@@ -1117,7 +1121,7 @@ h3 {
   }
 
   .hero-product img:not(.hidden-preload) {
-    width: min(360px, 92vw);
+    width: min(320px, 88vw);
     margin: 0 auto;
   }
 
@@ -1138,7 +1142,7 @@ h3 {
 
   .feature-card {
     min-height: 0;
-    padding: 24px;
+    padding: 20px;
   }
 
   .feature-icon {
@@ -1196,7 +1200,7 @@ h3 {
   }
 
   .testimonial-track {
-    min-height: 340px;
+    min-height: 300px;
   }
 
   .testimonial-card p {
@@ -1243,7 +1247,7 @@ h3 {
   }
 
   .cta-section {
-    min-height: 360px;
+    min-height: 320px;
   }
 
   .btn-large {
@@ -1264,7 +1268,7 @@ h3 {
 
 @media (max-width: 420px) {
   .hero {
-    padding-top: 122px;
+    padding-top: 116px;
   }
 
   h1 {
@@ -1276,7 +1280,7 @@ h3 {
   }
 
   .hero-product img:not(.hidden-preload) {
-    width: min(315px, 88vw);
+    width: min(290px, 84vw);
   }
 
   .usage-video {

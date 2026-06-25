@@ -177,16 +177,16 @@ h1 {
   max-width: 780px;
   margin-bottom: 16px;
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: clamp(3.8rem, 8vw, 7.5rem);
+  font-size: clamp(4rem, 7vw, 7rem);
   line-height: 0.9;
 }
 
 h2 {
   margin-bottom: 18px;
   font-family: "Oswald", "Inter", Arial, sans-serif;
-  font-size: clamp(2.15rem, 3.9vw, 3.65rem);
+  font-size: clamp(1.9rem, 3vw, 3rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.14;
 }
 
 h3 {
@@ -309,9 +309,9 @@ h3 {
 
 .usage .section-heading h2 {
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: clamp(3rem, 6vw, 5.6rem);
+  font-size: clamp(3.3rem, 5.4vw, 5.2rem);
   font-weight: 400;
-  line-height: 0.94;
+  line-height: 1.04;
 }
 
 .features {
@@ -714,7 +714,7 @@ h3 {
 
 .testimonial-card p {
   max-width: 780px;
-  font-size: clamp(1.35rem, 3vw, 2.35rem);
+  font-size: clamp(1.25rem, 2.25vw, 2rem);
   line-height: 1.25;
   font-weight: 800;
 }
@@ -779,7 +779,7 @@ h3 {
   text-shadow:
     0 5px 0 rgba(5, 7, 10, 0.32),
     0 18px 34px rgba(5, 7, 10, 0.36);
-  font-size: clamp(2.7rem, 5vw, 5.4rem);
+  font-size: clamp(2.6rem, 4.4vw, 4.8rem);
   white-space: nowrap;
 }
 
@@ -874,7 +874,7 @@ h3 {
 .selected-color {
   margin-bottom: 0;
   color: #081016;
-  font-size: clamp(2.25rem, 4.4vw, 3.8rem);
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
   font-family: "Oswald", "Inter", Arial, sans-serif;
   line-height: 1;
   font-weight: 700;
@@ -1045,7 +1045,7 @@ h3 {
   max-width: 980px;
   line-height: 1.08;
   font-family: "Oswald", "Inter", Arial, sans-serif;
-  font-size: clamp(2.3rem, 4vw, 3.8rem);
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
   font-weight: 700;
 }
 
@@ -1362,17 +1362,17 @@ h3 {
 
   h1 {
     max-width: 100%;
-    font-size: clamp(3.25rem, 17vw, 5rem);
+    font-size: clamp(3.1rem, 15vw, 4.6rem);
     line-height: 0.9;
   }
 
   h2 {
-    font-size: clamp(1.95rem, 8.5vw, 2.8rem);
+    font-size: clamp(1.75rem, 7.4vw, 2.45rem);
     line-height: 1.06;
   }
 
   .usage .section-heading h2 {
-    font-size: clamp(2.55rem, 12vw, 4rem);
+    font-size: clamp(2.45rem, 10.5vw, 3.65rem);
     line-height: 0.94;
   }
 
@@ -1496,7 +1496,7 @@ h3 {
   }
 
   .impact h2 {
-    font-size: clamp(2.1rem, 9vw, 3.2rem);
+    font-size: clamp(1.95rem, 8vw, 2.75rem);
     white-space: normal;
   }
 
@@ -1557,11 +1557,11 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3rem, 16vw, 4.2rem);
+    font-size: clamp(2.75rem, 14vw, 3.8rem);
   }
 
   h2 {
-    font-size: clamp(1.85rem, 8vw, 2.55rem);
+    font-size: clamp(1.65rem, 7vw, 2.25rem);
   }
 
   .hero-product img:not(.hidden-preload) {
@@ -1594,7 +1594,7 @@ h3 {
   }
 
   .selected-color {
-    font-size: clamp(2.1rem, 14vw, 3rem);
+    font-size: clamp(1.8rem, 11vw, 2.6rem);
   }
 
   .color-description {
@@ -1789,7 +1789,7 @@ h3 {
   }
 
   .cta-section h2 {
-    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    font-size: clamp(1.7rem, 7vw, 2.35rem);
   }
 }
 
@@ -1804,7 +1804,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.75rem, 15vw, 3.6rem);
+    font-size: clamp(2.55rem, 13vw, 3.25rem);
   }
 
   .hero-product img:not(.hidden-preload) {

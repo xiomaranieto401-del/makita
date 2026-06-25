@@ -131,22 +131,22 @@ const advantages = {
   battery: {
     number: "01",
     progress: "25%",
-    text: "Usá la misma batería Makita LXT® 18V que ya alimenta tus herramientas."
+    text: "La energía que ya usás para trabajar también puede preparar tu café."
   },
   cordless: {
     number: "02",
     progress: "50%",
-    text: "Prepará café caliente en obra, taller o exterior sin depender de un enchufe."
+    text: "No dependés de cocina, alargues ni tomas disponibles para hacer una pausa."
   },
   compact: {
     number: "03",
     progress: "75%",
-    text: "Menos cables y menos equipo extra. Va con vos junto al resto de tus herramientas."
+    text: "La pausa se mueve con vos: obra, camioneta, taller o exterior."
   },
   jobsite: {
     number: "04",
     progress: "100%",
-    text: "Robusta, portátil y pensada para jornadas exigentes, no para quedarse en una mesada."
+    text: "Aprovechás el ecosistema Makita en vez de sumar otro aparato aislado."
   }
 };
 

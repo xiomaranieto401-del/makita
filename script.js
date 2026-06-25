@@ -72,7 +72,7 @@ document.querySelectorAll("[data-carousel='usage']").forEach((carousel) => {
 });
 
 document.querySelectorAll("[data-carousel='testimonials']").forEach((carousel) => {
-  createCarousel(carousel, ".testimonial-card", 5000);
+  createCarousel(carousel, ".testimonial-card", 4300);
 });
 
 document.querySelectorAll("video[data-stop-at]").forEach((video) => {
@@ -117,10 +117,37 @@ const colorProduct = document.getElementById("colorProduct");
 const selectedColor = document.getElementById("selectedColor");
 const colorDescription = document.getElementById("colorDescription");
 const swatches = document.querySelectorAll(".color-swatch");
+const advantagePanel = document.getElementById("advantagePanel");
+const advantageNumber = document.getElementById("advantageNumber");
+const advantageText = document.getElementById("advantageText");
+const advantageTabs = document.querySelectorAll(".advantage-tab");
 
 const colorDescriptions = {
-  "Azul Makita": "El acabado clásico Makita: técnico, reconocible y alineado con el sistema LXT® de herramientas profesionales.",
-  "Verde militar": "Un tono sobrio y resistente, pensado para exteriores, camping y equipos que priorizan presencia discreta y robustez."
+  "Azul Makita": "El acabado clásico Makita: técnico, reconocible y alineado con el sistema LXT® de herramientas profesionales.",
+  "Verde militar": "Un tono sobrio y resistente, pensado para exteriores, camping y equipos que priorizan presencia discreta y robustez."
+};
+
+const advantages = {
+  battery: {
+    number: "01",
+    progress: "25%",
+    text: "Usá la misma batería Makita LXT® 18V que ya alimenta tus herramientas."
+  },
+  cordless: {
+    number: "02",
+    progress: "50%",
+    text: "Prepará café caliente en obra, taller o exterior sin depender de un enchufe."
+  },
+  compact: {
+    number: "03",
+    progress: "75%",
+    text: "Menos cables y menos equipo extra. Va con vos junto al resto de tus herramientas."
+  },
+  jobsite: {
+    number: "04",
+    progress: "100%",
+    text: "Robusta, portátil y pensada para jornadas exigentes, no para quedarse en una mesada."
+  }
 };
 
 swatches.forEach((swatch) => {
@@ -144,6 +171,28 @@ swatches.forEach((swatch) => {
       colorProduct.style.opacity = "1";
       colorProduct.style.transform = "scale(1)";
     }, 180);
+  });
+});
+
+advantageTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const key = tab.dataset.advantage;
+    const data = advantages[key];
+    if (!data) return;
+
+    advantageTabs.forEach((item) => item.classList.remove("active"));
+    tab.classList.add("active");
+
+    advantagePanel.style.opacity = "0";
+    advantagePanel.style.transform = "translateY(8px)";
+
+    setTimeout(() => {
+      advantageNumber.textContent = data.number;
+      advantageText.textContent = data.text;
+      advantagePanel.style.setProperty("--advantage-progress", data.progress);
+      advantagePanel.style.opacity = "1";
+      advantagePanel.style.transform = "translateY(0)";
+    }, 160);
   });
 });
 

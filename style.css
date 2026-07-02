@@ -1238,6 +1238,14 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .spec-content {
+    order: 1;
+  }
+
+  .spec-gallery {
+    order: 2;
+  }
+
   .impact {
     padding: 64px 24px;
   }

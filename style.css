@@ -1094,15 +1094,17 @@ h3 {
 .cta-section > div {
   position: relative;
   z-index: 1;
-  width: min(600px, 52vw);
-  margin-right: min(42vw, 520px);
+  justify-self: start;
+  width: min(760px, 43vw);
+  margin-left: clamp(42px, 13vw, 250px);
+  margin-right: 0;
 }
 
 .cta-section h2 {
-  max-width: 600px;
+  max-width: 760px;
   line-height: 1.08;
   font-family: "Oswald", "Inter", Arial, sans-serif;
-  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-size: clamp(2rem, 2.6vw, 2.85rem);
   font-weight: 700;
 }
 
@@ -1610,6 +1612,8 @@ h3 {
 
   .cta-section > div {
     width: min(680px, 92vw);
+    justify-self: center;
+    margin-left: 0;
     margin-right: 0;
   }
 

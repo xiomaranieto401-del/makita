@@ -92,24 +92,62 @@ document.querySelectorAll("video[data-stop-at]").forEach((video) => {
   });
 });
 
-const galleryMain = document.querySelector(".gallery-main");
-const thumbs = document.querySelectorAll(".thumb");
+const specTitle = document.getElementById("specTitle");
+const specDescription = document.getElementById("specDescription");
+const specHotspots = document.querySelectorAll(".spec-hotspot");
+const specTabs = document.querySelectorAll(".spec-tab");
 
-thumbs.forEach((thumb) => {
-  thumb.addEventListener("click", () => {
-    const nextSrc = thumb.dataset.src;
-    if (!galleryMain || galleryMain.src === nextSrc) return;
+const specs = {
+  battery: {
+    title: "Batería LXT® 18V",
+    description: "Compatible con baterías Makita LXT® de 18V para trabajar sin enchufe y usar la misma energía del resto de tus herramientas."
+  },
+  tank: {
+    title: "Depósito integrado",
+    description: "Sistema compacto para cargar agua y preparar café caliente sin depender de una cocina cercana."
+  },
+  cup: {
+    title: "Taza de 240 ml",
+    description: "Capacidad práctica para una pausa real en obra, taller, camioneta o exterior."
+  },
+  body: {
+    title: "Cuerpo robusto",
+    description: "Construcción compacta y resistente, pensada para traslados diarios y entornos de trabajo exigentes."
+  },
+  handle: {
+    title: "Manija superior",
+    description: "Formato portátil para moverla como una herramienta más dentro del equipo Makita."
+  }
+};
 
-    thumbs.forEach((item) => item.classList.remove("active"));
-    thumb.classList.add("active");
-    galleryMain.style.opacity = "0";
+function showSpec(key) {
+  const data = specs[key];
+  if (!data || !specTitle || !specDescription) return;
 
-    setTimeout(() => {
-      galleryMain.src = nextSrc;
-      galleryMain.alt = thumb.dataset.alt || galleryMain.alt;
-      galleryMain.style.opacity = "1";
-    }, 180);
-  });
+  specHotspots.forEach((item) => item.classList.toggle("active", item.dataset.spec === key));
+  specTabs.forEach((item) => item.classList.toggle("active", item.dataset.spec === key));
+
+  specTitle.style.opacity = "0";
+  specDescription.style.opacity = "0";
+  specTitle.style.transform = "translateY(6px)";
+  specDescription.style.transform = "translateY(6px)";
+
+  setTimeout(() => {
+    specTitle.textContent = data.title;
+    specDescription.textContent = data.description;
+    specTitle.style.opacity = "1";
+    specDescription.style.opacity = "1";
+    specTitle.style.transform = "translateY(0)";
+    specDescription.style.transform = "translateY(0)";
+  }, 140);
+}
+
+specHotspots.forEach((hotspot) => {
+  hotspot.addEventListener("click", () => showSpec(hotspot.dataset.spec));
+});
+
+specTabs.forEach((tab) => {
+  tab.addEventListener("click", () => showSpec(tab.dataset.spec));
 });
 
 const colorShell = document.getElementById("colorShell");
@@ -131,22 +169,22 @@ const advantages = {
   battery: {
     number: "01",
     progress: "25%",
-    text: "La energía que ya usás para trabajar también puede preparar tu café."
+    text: "Usá la misma batería LXT® 18V que ya alimenta tus herramientas Makita."
   },
   cordless: {
     number: "02",
     progress: "50%",
-    text: "No dependés de cocina, alargues ni tomas disponibles para hacer una pausa."
+    text: "Se integra al sistema que ya llevás a obra, taller o camioneta."
   },
   compact: {
     number: "03",
     progress: "75%",
-    text: "La pausa se mueve con vos: obra, camioneta, taller o exterior."
+    text: "Menos cargadores, menos accesorios y menos equipos aislados."
   },
   jobsite: {
     number: "04",
     progress: "100%",
-    text: "Aprovechás el ecosistema Makita en vez de sumar otro aparato aislado."
+    text: "La DCM501 entra en la misma lógica de trabajo que el resto de tus herramientas."
   }
 };
 

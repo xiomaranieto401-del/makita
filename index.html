@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260702a">
+  <link rel="stylesheet" href="style.css?v=20260706s">
 </head>
 <body>
   <header class="site-header" id="top">
@@ -34,12 +34,9 @@
       <div class="hero-content reveal">
         <h1>EL CAFÉ QUE TRABAJA&nbsp;CON&nbsp;VOS</h1>
         <p class="hero-description">
-          La Makita DCM501 es una cafetera inalámbrica compatible con baterías Makita LXT® de 18V,
-          diseñada para ofrecer café caliente y rendimiento constante incluso en los entornos&nbsp;más&nbsp;exigentes.
+          Cafetera inalámbrica compatible con baterías Makita LXT® 18V,
+          pensada para preparar café caliente en jornadas&nbsp;exigentes.
         </p>
-      </div>
-      <div class="hero-product reveal">
-        <img src="assets/dcm501-hero-cutout.png" alt="Cafetera portátil Makita DCM501">
       </div>
     </section>
 
@@ -130,24 +127,25 @@
 
     <section class="section specs" id="especificaciones">
       <div class="spec-gallery reveal">
-        <img class="gallery-main" src="assets/dcm501-vista-lateral-cutout.png" alt="Makita DCM501 vista lateral">
-        <div class="gallery-thumbs">
-          <button class="thumb active" type="button" data-src="assets/dcm501-vista-lateral-cutout.png" data-alt="Makita DCM501 vista lateral"><img src="assets/dcm501-vista-lateral-cutout.png" alt="Vista lateral"></button>
-          <button class="thumb" type="button" data-src="assets/dcm501-vista-frontal-cutout.png" data-alt="Makita DCM501 vista frontal"><img src="assets/dcm501-vista-frontal-cutout.png" alt="Vista frontal"></button>
-          <button class="thumb" type="button" data-src="assets/dcm501-entorno-trabajo.png" data-alt="Makita DCM501 en entorno de trabajo"><img src="assets/dcm501-entorno-trabajo.png" alt="Vista en entorno de trabajo"></button>
-          <button class="thumb" type="button" data-src="assets/dcm501-taza-makita.png" data-alt="Taza Makita de acero inoxidable"><img src="assets/dcm501-taza-makita.png" alt="Taza Makita"></button>
+        <div class="spec-product-map">
+          <img class="gallery-main" src="assets/dcm501-vista-lateral-cutout.png" alt="Makita DCM501 vista lateral">
+          <button class="spec-hotspot active" type="button" data-spec="battery" aria-label="Ver batería" style="--x: 36%; --y: 72%"></button>
+          <button class="spec-hotspot" type="button" data-spec="tank" aria-label="Ver depósito" style="--x: 71%; --y: 35%"></button>
+          <button class="spec-hotspot" type="button" data-spec="cup" aria-label="Ver taza" style="--x: 84%; --y: 62%"></button>
+          <button class="spec-hotspot" type="button" data-spec="body" aria-label="Ver cuerpo compacto" style="--x: 48%; --y: 47%"></button>
+          <button class="spec-hotspot" type="button" data-spec="handle" aria-label="Ver manija" style="--x: 47%; --y: 12%"></button>
         </div>
       </div>
       <div class="spec-content reveal">
         <p class="eyebrow">Especificaciones técnicas</p>
-        <h2>Compacta, inalámbrica y lista&nbsp;para&nbsp;producir</h2>
-        <div class="spec-grid">
-          <article><span>Alimentación</span><strong>Baterías Makita LXT® 18V.</strong></article>
-          <article><span>Capacidad</span><strong>240 ml.</strong></article>
-          <article><span>Compatibilidad</span><strong>Café molido y pods.</strong></article>
-          <article><span>Peso</span><strong>1,9 kg.</strong></article>
-          <article><span>Diseño</span><strong>Compacto y portátil.</strong></article>
-          <article><span>Uso recomendado</span><strong>Construcción, talleres, camping&nbsp;y&nbsp;viajes.</strong></article>
+        <h2 id="specTitle">Batería LXT® 18V</h2>
+        <p class="spec-description" id="specDescription">Compatible con baterías Makita LXT® de 18V para trabajar sin enchufe y usar la misma energía del resto de tus herramientas.</p>
+        <div class="spec-tabs" aria-label="Partes técnicas de la cafetera">
+          <button class="spec-tab active" type="button" data-spec="battery">Batería</button>
+          <button class="spec-tab" type="button" data-spec="tank">Depósito</button>
+          <button class="spec-tab" type="button" data-spec="cup">Taza</button>
+          <button class="spec-tab" type="button" data-spec="body">Cuerpo</button>
+          <button class="spec-tab" type="button" data-spec="handle">Manija</button>
         </div>
       </div>
     </section>
@@ -212,33 +210,56 @@
       </div>
     </section>
 
+    <section class="section work-context" id="contexto">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Café sin depender del lugar</p>
+        <h2>Menos dependencia del&nbsp;entorno</h2>
+      </div>
+      <div class="work-context-visual reveal">
+        <figure class="work-context-photo work-context-photo-large">
+          <img src="assets/dcm501-sin-cocina-cerca-ai.png" alt="Makita DCM501 sobre banco de obra sin cocina cercana">
+          <figcaption>Sin cocina cerca</figcaption>
+        </figure>
+        <div class="work-context-stack">
+          <figure class="work-context-photo">
+            <img src="assets/dcm501-sin-estacion-fija-ai.png" alt="Makita DCM501 en camioneta de trabajo sin estación fija">
+            <figcaption>Sin estación fija</figcaption>
+          </figure>
+          <figure class="work-context-photo">
+            <img src="assets/dcm501-impacto-trabajo.png" alt="Makita DCM501 durante una pausa">
+            <figcaption>Sin cortar la jornada</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section advantage">
       <div class="section-heading reveal">
-        <p class="eyebrow">Ventaja Makita</p>
-        <h2>Autonomía que una cafetera común no&nbsp;te&nbsp;da</h2>
+        <p class="eyebrow">Sistema Makita LXT®</p>
+        <h2>Una herramienta más dentro&nbsp;del&nbsp;equipo</h2>
       </div>
       <div class="advantage-layout reveal">
         <div class="advantage-tabs" role="tablist" aria-label="Ventajas de la Makita DCM501">
           <button class="advantage-tab active" type="button" data-advantage="battery">
             <span>01</span>
-            Energía compartida
+            Misma batería
           </button>
           <button class="advantage-tab" type="button" data-advantage="cordless">
             <span>02</span>
-            Sin infraestructura
+            Mismo sistema
           </button>
           <button class="advantage-tab" type="button" data-advantage="compact">
             <span>03</span>
-            Autonomía real
+            Menos equipo extra
           </button>
           <button class="advantage-tab" type="button" data-advantage="jobsite">
             <span>04</span>
-            Mismo ecosistema
+            Rutina Makita
           </button>
         </div>
         <div class="advantage-panel" id="advantagePanel">
           <p class="advantage-number" id="advantageNumber">01</p>
-          <p id="advantageText">La energía que ya usás para trabajar también puede preparar tu café.</p>
+          <p id="advantageText">Usá la misma batería LXT® 18V que ya alimenta tus herramientas Makita.</p>
           <div class="advantage-meter" aria-hidden="true">
             <span></span>
           </div>
@@ -255,17 +276,39 @@
   </main>
 
   <footer class="footer" id="contacto">
-    <div class="footer-brand">Makita</div>
-    <div class="footer-links">
-      <a href="tel:+541100000000">Teléfono</a>
-      <a href="mailto:contacto@makita.com">Correo electrónico</a>
-      <a href="https://www.makitatools.com/" target="_blank" rel="noreferrer">Sitio web</a>
-      <a href="https://www.instagram.com/makitatools/" target="_blank" rel="noreferrer">Instagram</a>
-      <a href="https://www.facebook.com/MakitaToolsPage/" target="_blank" rel="noreferrer">Facebook</a>
-      <a href="https://www.youtube.com/user/MakitaPowerTools" target="_blank" rel="noreferrer">YouTube</a>
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <div class="footer-logo">Makita</div>
+        <p>Herramientas diseñadas para acompañar jornadas exigentes, dentro y fuera del taller.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/makitatools/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/MakitaToolsPage/" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://www.youtube.com/user/MakitaPowerTools" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <a href="mailto:contacto@makita.com">contacto@makita.com</a>
+        <a href="tel:+541155555555">+54 11 5555-5555</a>
+        <a href="https://www.makitatools.com/" target="_blank" rel="noreferrer">makitatools.com</a>
+      </div>
+
+      <div class="footer-col footer-news">
+        <h3>Novedades</h3>
+        <p>Recibí lanzamientos, novedades del sistema LXT® y contenidos para jornadas de trabajo.</p>
+        <form class="newsletter-form">
+          <input type="email" name="email" placeholder="Tu correo electrónico" aria-label="Tu correo electrónico">
+          <button type="button">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Makita. Todos los derechos reservados.</span>
+      <span>DCM501 · Cordless Coffee Maker 18V LXT®</span>
     </div>
   </footer>
 
-  <script src="script.js?v=20260702a"></script>
+  <script src="script.js?v=20260706s"></script>
 </body>
 </html>

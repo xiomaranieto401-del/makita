@@ -198,16 +198,18 @@ swatches.forEach((swatch) => {
     swatch.classList.add("active");
 
     colorProduct.style.opacity = "0";
-    colorProduct.style.transform = "scale(0.985)";
+    colorProduct.style.transform = color === "Azul Makita" ? "scale(1.03)" : "scale(0.985)";
 
     setTimeout(() => {
       colorShell.style.setProperty("--product-tint", tint);
+      colorShell.dataset.color = color;
       colorProduct.src = image;
       colorProduct.alt = `Makita DCM501 color ${color}`;
+      colorProduct.dataset.color = color;
       selectedColor.textContent = color;
       colorDescription.textContent = colorDescriptions[color] || "";
       colorProduct.style.opacity = "1";
-      colorProduct.style.transform = "scale(1)";
+      colorProduct.style.transform = "";
     }, 180);
   });
 });
@@ -236,12 +238,18 @@ advantageTabs.forEach((tab) => {
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
+    const href = link.getAttribute("href");
+    const target = document.querySelector(href);
     if (!target) return;
 
     event.preventDefault();
     siteHeader?.classList.remove("menu-open");
     menuToggle?.setAttribute("aria-expanded", "false");
+    if (href === "#top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });

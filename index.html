@@ -7,11 +7,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260706w">
+  <link rel="stylesheet" href="style.css?v=20260712v">
 </head>
 <body>
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Makita DCM501 inicio">Makita</a>
+    <a class="brand" href="#top" aria-label="Makita DCM501 inicio">
+      <img src="assets/makita-logo-white.png" alt="Makita">
+    </a>
     <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
       <span></span>
       <span></span>
@@ -194,12 +196,12 @@
         <h2>Elegí la que mejor acompaña&nbsp;tu&nbsp;equipo</h2>
       </div>
       <div class="color-showcase reveal">
-        <div class="color-product-shell" id="colorShell">
-          <img id="colorProduct" src="assets/dcm501-color-azul-makita-cutout.png" alt="Makita DCM501 color Azul Makita">
+        <div class="color-product-shell" id="colorShell" data-color="Azul Makita">
+          <img id="colorProduct" src="assets/dcm501-color-azul-makita-close.png" alt="Makita DCM501 color Azul Makita" data-color="Azul Makita">
         </div>
         <div class="color-info">
           <div class="color-picker" aria-label="Selector de color">
-            <button class="color-swatch active" type="button" data-color="Azul Makita" data-src="assets/dcm501-color-azul-makita-cutout.png" data-tint="#0066B3" aria-label="Azul Makita" style="--swatch:#0066B3"></button>
+            <button class="color-swatch active" type="button" data-color="Azul Makita" data-src="assets/dcm501-color-azul-makita-close.png" data-tint="#0066B3" aria-label="Azul Makita" style="--swatch:#0066B3"></button>
             <button class="color-swatch" type="button" data-color="Verde militar" data-src="assets/dcm501-color-verde-militar-cutout.png" data-tint="#53624a" aria-label="Verde militar" style="--swatch:#53624a"></button>
           </div>
           <div class="color-copy">
@@ -270,7 +272,7 @@
     <section class="cta-section" id="cta">
       <div class="reveal">
         <h2>Prepará tu próxima jornada con una herramienta más&nbsp;a&nbsp;tu&nbsp;lado</h2>
-        <a class="btn btn-primary btn-large" href="#top">DESCUBRIR LA DCM501</a>
+        <a class="btn btn-primary btn-large" href="https://www.makitatools.com/products/details/DCM501Z" target="_blank" rel="noreferrer">CONOCÉ AL DISTRIBUIDOR</a>
       </div>
     </section>
   </main>
@@ -278,7 +280,9 @@
   <footer class="footer" id="contacto">
     <div class="footer-grid">
       <div class="footer-col footer-about">
-        <div class="footer-logo">Makita</div>
+        <div class="footer-logo">
+          <img src="assets/makita-logo-white.png" alt="Makita">
+        </div>
         <p>Herramientas diseñadas para acompañar jornadas exigentes, dentro y fuera del taller.</p>
         <div class="footer-socials">
           <a href="https://www.instagram.com/makitatools/" target="_blank" rel="noreferrer">Instagram</a>
@@ -309,6 +313,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260706w"></script>
+  <script src="script.js?v=20260712v"></script>
 </body>
 </html>
